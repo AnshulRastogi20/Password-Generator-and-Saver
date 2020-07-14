@@ -52,11 +52,11 @@ random.shuffle(rand_pass)
 final_pass = "".join(rand_pass)
 
 def generate_pass():
-    l2.grid(row=3,pady = 5)
-    l3.grid(row=4)
-    b2.grid(row=5,column=0,pady=5,padx=10)
+    l2.grid(row=3,column=4,pady = 15)
+    l3.grid(row=4,column=4)
+    b2.grid(row=5,column=4,pady=15,padx=10)
 
-o = open('Test 1.txt','a+')
+o = open('Passwords.txt','a+')
 
 def foraccount():
     i = web_value.get()
@@ -68,11 +68,11 @@ def save_pass():
     o.seek(0)
     o.read()
     o.close()
-    l4.grid(row=6)
+    l4.grid(row=6,column=4,pady = 15)
 
 root = Tk()
 
-root.geometry('400x400')
+root.geometry('280x350')
 root.configure(bg = 'orange')
 root.title('Password Generator')
 
@@ -82,20 +82,20 @@ l2 = Label(root,text='Generated Password')
 l3 = Label(root, bg='white',fg='black',text ='{}'.format(final_pass))
 l4 = Label(root,text='Password Saved'+'\n'+'Rerun to add other password',font='bold')
 
-l1.grid(row=0,pady=5,padx=10)
+l1.grid(row=0,column=4,pady=15,padx=110)
 
 
 b1 = Button(root, fg='red', text = 'Generate Password',command=generate_pass)
 b2 = Button(root, fg= 'blue',text='Save',command=save_pass)
 
 
-b1.grid(row=2, pady= 5)
+b1.grid(row=2,column=4,pady= 15)
 
 
 web = StringVar()
 
 web_value = Entry(root,textvariable = web)
-web_value.grid(row=1)
+web_value.grid(row=1,column=4)
 
 
 root.mainloop()
