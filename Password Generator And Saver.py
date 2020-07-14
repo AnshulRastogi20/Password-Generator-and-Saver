@@ -80,7 +80,7 @@ root.title('Password Generator')
 l1 = Label(root, text = 'Website :')
 l2 = Label(root,text='Generated Password')
 l3 = Label(root, bg='white',fg='black',text ='{}'.format(final_pass))
-l4 = Label(root,text='Rerun to add other password',font='bold')
+l4 = Label(root,text='Password Saved'+'\n'+'Rerun to add other password',font='bold')
 
 l1.grid(row=0,pady=5,padx=10)
 
